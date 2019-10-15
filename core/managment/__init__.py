@@ -2,7 +2,7 @@
 import sys
 
 # All commands
-from .helpers import commands
+from .commands.helpers import commands
 from .commands.help import help
 
 class ManageUtil:
