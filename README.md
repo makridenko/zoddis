@@ -1,2 +1,2 @@
 # zoddis
-Client-server application generation util. (React, Django, GraphQL, Docker, docker-compose)
+Client-server application template generator. (React, Django, GraphQL, Docker, docker-compose)
