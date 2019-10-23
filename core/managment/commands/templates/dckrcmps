@@ -1,0 +1,25 @@
+version: '2'
+services:
+  front_nodejs:
+    build:
+      context: ./frontend
+      dockerfile: ./docker/nodejs/Dockerfile
+    volumes:
+      - ./frontend/workdir:/workdir
+      - ./volumes/data:/data
+    ports:
+     - "{front_ports}:3000"
+    # command: yarn start
+    command: /bin/sh -c "while true; do echo faking deamon; sleep 60; done"
+
+  back_django:
+    build:
+      context: ./backend
+      dockerfile: ./docker/django/Dockerfile
+    volumes:
+      - ./backend/workdir:/workdir
+      - ./volumes/data:/data
+    ports:
+     - "{back_ports}:8000"
+    # command: python manage.py runserver 0.0.0.0:8000
+    command: /bin/sh -c "while true; do echo faking deamon; sleep 60; done"

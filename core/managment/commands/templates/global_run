@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [[ $1 = "init" ]]; then
+  docker-compose up -d
+  exit 1
+fi
+
+if [[ $1 = "back" ]]; then
+  docker exec -it {prj_name}_back_django /bin/bash
+  exit 1
+fi
+
+if [[ $1 = "front" ]]; then
+  docker exec -it {prj_name}_front_nodejs /bin/bash
+  exit 1
+fi
+
+# DEFAULT
+./run.sh init

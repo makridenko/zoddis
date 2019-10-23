@@ -1,6 +1,7 @@
 # Global modules
 import sys
 import shutil
+import fileinput
 
 # Zoddis modules
 from . import templates
@@ -39,10 +40,9 @@ def gen_dirs(project_dir):
 
 
 # Function for copy file from template
-def copy_file(name, lib_name, file_path):
-    lib_name += "_template"
-    template_path = templates.__path__[0] + '/' + lib_name
-    shutil.copy2(template_path + name, file_path)
+def copy_file(name, dest_path):
+    template_path = templates.__path__[0] + '/' + name
+    shutil.copy2(template_path, dest_path)
 
 
 # Function for replace str line

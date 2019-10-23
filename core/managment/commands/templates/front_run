@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [[ $1 = "dev" ]]; then
+  echo "Running develop web-server"
+  pkill node
+  yarn start
+  exit 1
+fi
+
+if [[ $1 = "relay" ]]; then
+  clear
+  yarn run relay-compiler --src ./src --schema /data/schema.json
+  exit 1
+fi
+
+# Default command without arguments
+./run.sh dev
