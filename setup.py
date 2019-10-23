@@ -11,7 +11,6 @@ setup(name='zoddis',
           'zds = core.managment: execute_from_command_line'
       ]},
       install_requires=[
-        'shutil',
       ],
       include_package_data=True,
       packages=find_packages()
