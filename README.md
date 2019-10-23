@@ -2,7 +2,7 @@
 
 ![Zoddis Logo](pics/logo.png)
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/keras-team/keras/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/makridenko/zoddis/blob/master/LICENSE)
 
 ## This is Zoddis.
 
